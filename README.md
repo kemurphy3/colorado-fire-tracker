@@ -4,23 +4,20 @@ A wildfire risk prediction tool that combines NEON's detailed ecological data wi
 
 ## What this is
 
-Living in Colorado, you can't ignore wildfire season. The smell of smoke, the orange skies, the evacuation warnings - it's become part of life here. Most fire risk models look at weather patterns and basic vegetation indices, but they miss a lot of the ground-level detail that actually matters.
+Living in Colorado, wildfire season feels inevitable. Most fire risk models look at weather patterns and basic vegetation indices, but they miss a lot of the ground-level detail that actually matters.
 
-This project tries something different. NEON flies planes over their field sites collecting incredibly detailed data - hyperspectral imagery that sees way beyond RGB, LiDAR that maps vegetation structure down to individual trees. The problem? They only cover small areas. So I'm working on translating those insights to satellites like Sentinel-2 and MODIS that cover the whole state.
-
-Think of it like this: NEON shows us what healthy vs stressed vegetation *really* looks like at a molecular level. We then teach satellites to recognize those same patterns in their lower-resolution data. It's not perfect, but it's better than pretending all "green" pixels are the same.
+This project tries something different. NEON's Aerial Observation Platform (AOP) team flies over the field sites in a pushbroom pattern using its sensors to capture hyperspectral, LiDAR, and high-resolution camera imagery data at an incredible resolution. The trade off is that the flightboxes for each site are typically only 10x10kms. In order to properly scale the fine NEON data, I'm developing a crosswalk to translate it to satellites like Sentinel-2 and MODIS that cover the whole state.
 
 ## Why I'm building this
 
 A few reasons:
-- The Cameron Peak Fire in 2020 burned right through areas near NEON's NIWO site. We have before/after data at insane resolution.
+- The Cameron Peak Fire in 2020 burned right through areas near NEON's NIWO site. We have very useful before/after data
 - Traditional NDVI (vegetation greenness) completely misses drought-stressed conifers that still look green but are basically tinderboxes
 - I work with NEON data professionally and kept thinking "we could do something useful with this"
 
 ## Current status
 
-Still early days. Right now I'm:
-- Getting the NEON AOP data pipeline working (these files are massive)
+Still early days. Right now I am:
 - Building the crosswalk between NEON's hyperspectral bands and Sentinel-2's multispectral ones
 - Setting up a basic web interface to visualize risk levels
 
@@ -33,7 +30,7 @@ Still early days. Right now I'm:
 **Eventually:**
 - MODIS integration for daily updates (Sentinel only passes over every 5 days)
 - Expand to other western states with NEON sites
-- Add weather data, fuel moisture, maybe even power line locations
+- Add weather data, fuel moisture, etc
 
 **Maybe someday:**
 - Real-time smoke plume detection
