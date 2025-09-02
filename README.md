@@ -1,6 +1,6 @@
 # Colorado Fire Watch
 
-**Elevator Pitch**  
+**Quick Overview**  
 Wildfire risk is one of the most urgent challenges facing the American West. **Colorado Fire Watch** predicts wildfire risk across Colorado using a novel combination of **NEON’s high-resolution Airborne Observation Platform (AOP) data** and **broad-coverage satellite sensors like Sentinel-2 and MODIS**.  
 
 Most models stop at weather and vegetation indices. This project goes further by tying fine-scale ecological data to scalable satellite products, creating predictions that are both **scientifically rigorous** and **operationally useful**.  
